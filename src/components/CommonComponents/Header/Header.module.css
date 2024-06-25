@@ -62,3 +62,7 @@
   height: 29px;
   width: 135px;
 }
+
+.divButtons {
+  display: flex;
+}

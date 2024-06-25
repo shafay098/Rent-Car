@@ -9,6 +9,7 @@ import Image from "next/image";
 import classes from "./Header.module.css";
 import { mergeClass } from "@/utils/HelperFunctions";
 import useResponsiveHook from "@/hooks/useResponsiveHook";
+import { Button } from "../Button";
 
 // icons
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -74,11 +75,11 @@ export const Header = () => {
                     return <div key={index}>{renderLinks(item)}</div>;
                   })}
 
-                  <div className={classes?.iconContainerDrawer}>
+                  {/* <div className={classes?.iconContainerDrawer}>
                     {iconsArray?.map((icon, index) => {
                       return <div key={index}>{icon?.iconjsx}</div>;
                     })}
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </Drawer>
@@ -94,11 +95,15 @@ export const Header = () => {
             </Col>
 
             <Col xs={3}>
-              <div className={classes?.iconContainer}>
+              <div className={classes?.divButtons}>
+                <Button variant="outlined">Signin</Button>
+                <Button variant="primary">Sign Up</Button>
+              </div>
+              {/* <div className={classes?.iconContainer}>
                 {iconsArray?.map((icon, index) => {
                   return <div key={index}>{icon?.iconjsx}</div>;
                 })}
-              </div>
+              </div> */}
             </Col>
           </>
         )}
@@ -109,21 +114,21 @@ export const Header = () => {
 
 // icons array here can add label also
 
-const iconsArray = [
-  {
-    iconjsx: <VscAccount color="black" size={25} />,
-    label: "Account Alert",
-  },
-  {
-    iconjsx: <CiSearch color="black" size={25} />,
-    label: "Search",
-  },
-  {
-    iconjsx: <FaRegHeart color="black" size={25} />,
-    label: "heart",
-  },
-  {
-    iconjsx: <FaCartShopping color="black" size={25} />,
-    label: "cart shopping",
-  },
-];
+// const iconsArray = [
+//   {
+//     iconjsx: <VscAccount color="black" size={25} />,
+//     label: "Account Alert",
+//   },
+//   {
+//     iconjsx: <CiSearch color="black" size={25} />,
+//     label: "Search",
+//   },
+//   {
+//     iconjsx: <FaRegHeart color="black" size={25} />,
+//     label: "heart",
+//   },
+//   {
+//     iconjsx: <FaCartShopping color="black" size={25} />,
+//     label: "cart shopping",
+//   },
+// ];

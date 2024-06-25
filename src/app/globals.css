@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.htmlClass {
+/* .htmlClass {
   position: relative;
 }
 
@@ -20,7 +20,7 @@
   .bodyContainerStyle::before {
     display: none !important;
   }
-}
+} */
 
 .maxline1 {
   overflow: hidden;

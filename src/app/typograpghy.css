@@ -1,22 +1,73 @@
 /* headings */
 
 .h1 {
-  font-size: 80px;
+  font-size: 64px;
   font-family: var(--Poppins);
-  font-weight: 800;
-  color: var(--sceondaryBlueClr);
+  font-weight: 600;
+  color: var(--text-v4-clr);
+}
+
+.h2 {
+  font-size: 48px;
+  font-family: var(--Poppins);
+  font-weight: 600;
+  color: var(--text-v2-clr);
+}
+
+.h3 {
+  font-size: 38px;
+  font-family: var(--Poppins);
+  font-weight: 500;
+  color: var(--text-v3-clr);
+}
+
+.h4 {
+  font-size: 24px;
+  font-family: var(--Poppins);
+  font-weight: 500;
+  color: var(--text-v4-clr);
 }
 
 /* body */
 
 .p1 {
   font-family: var(--Poppins);
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 20px;
+  color: var(--text-v2-clr);
+  font-weight: 500;
 }
 
 .p2 {
   font-family: var(--Poppins);
+  font-size: 18px;
+  color: var(--text-v5-clr);
+  font-weight: 400;
+}
+
+.p3 {
+  font-family: var(--Poppins);
   font-size: 16px;
+  color: var(--text-v6-clr);
+  font-weight: 500;
+}
+
+.p3-light {
+  font-family: var(--Poppins);
+  font-size: 16px;
+  color: var(--text-med-light-clr);
+  font-weight: 400;
+}
+
+.p4 {
+  font-family: var(--Poppins);
+  font-size: 14px;
+  color: var(--text-med-light-clr);
+  font-weight: 500;
+}
+
+.p4-light {
+  font-family: var(--Poppins);
+  font-size: 14px;
+  color: var(--text-light-clr);
   font-weight: 400;
 }
