@@ -9,11 +9,23 @@
 }
 
 .button[variant="primary"] {
-  background-color: var(--primary-clr);
+  background-color: var(--primaryColor);
   color: white;
   font-family: var(--Poppins);
   font-weight: 700;
   font-size: 16px;
+}
+
+.button[variant="primary-light"] {
+  background-color: rgba(21, 114, 211, 0.1);
+  color: var(--primaryColor);
+  font-family: var(--Poppins);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: capitalize;
 }
 
 .button[variant="secondary"] {

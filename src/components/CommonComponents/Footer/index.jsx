@@ -10,6 +10,7 @@ import Image from "next/image";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { BsTelephone } from "react-icons/bs";
 import { CiMail } from "react-icons/ci";
+import { FaFacebook, FaInstagram, FaYoutube } from "react-icons/fa";
 
 export const Footer = () => {
   const [email, setEmail] = useState("");
@@ -37,7 +38,7 @@ export const Footer = () => {
     <Container fluid className={classes?.footerRootCont}>
       <Container className="mt-32">
         <Row>
-          <Col xxl={3} xl={3} lg={12} xs={12}>
+          <Col className="mt-5" xxl={3} xl={3} lg={12} xs={12}>
             <div className={classes?.firstColDiv}>
               <h3 className={classes?.headingLogo}>
                 <Image
@@ -69,32 +70,26 @@ export const Footer = () => {
             </div>
           </Col>
 
-          <Col xxl={2} xl={2} lg={4} md={4} sm={4} xs={6}>
+          <Col className="mt-5" xxl={2} xl={2} lg={4} md={4} sm={4} xs={6}>
             {listItems(linksObject1)}
           </Col>
 
-          <Col xxl={2} xl={2} lg={4} md={4} sm={4} xs={6}>
+          <Col className="mt-5" xxl={2} xl={2} lg={4} md={4} sm={4} xs={6}>
             {listItems(linksObject2)}
           </Col>
 
-          <Col xxl={2} xl={2} lg={4} md={4} sm={4} xs={6}>
+          <Col className="mt-5" xxl={2} xl={2} lg={4} md={4} sm={4} xs={6}>
             {listItems(linksObject2)}
           </Col>
 
-          <Col xxl={3} xl={3} lg={4} md={4} sm={4} xs={12}>
+          <Col className="mt-5" xxl={3} xl={3} lg={4} md={4} sm={4} xs={12}>
             {
               <div className={classes?.newsletterDiv}>
-                <p className={classes?.paraText}>Newsletter</p>
+                <p className={classes?.paraText}>Follow us</p>
                 <div className={classes?.subscribeCont}>
-                  <Input
-                    inputContainerClass={classes?.inputClass}
-                    value={email}
-                    setValue={setEmail}
-                  />
-
-                  <p className={classes?.subscribeText} onClick={() => {}}>
-                    SUBSCRIBE
-                  </p>
+                  <FaFacebook size={24} />
+                  <FaInstagram size={24} />
+                  <FaYoutube size={24} />
                 </div>
               </div>
             }

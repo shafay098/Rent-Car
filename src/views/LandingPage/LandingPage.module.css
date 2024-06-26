@@ -1,0 +1,18 @@
+.imageContainer {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 435px;
+  z-index: 3;
+}
+
+.textConainerSec1 {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.imagePayDiv {
+  display: flex;
+  gap: 1rem;
+}
