@@ -8,6 +8,7 @@ import "./typograpghy.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Footer } from "@/components/CommonComponents/Footer";
 
 const inter = Inter({ subsets: ["latin"], variable: "--Inter" });
 const poppins = Poppins({
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
       <body className={"bodyContainerStyle"}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

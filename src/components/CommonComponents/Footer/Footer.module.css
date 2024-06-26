@@ -11,37 +11,39 @@
   gap: 45px;
 }
 
+.listRootContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
 .paraText {
-  color: var(--gray-clr);
+  color: var(--text-light-v2-clr);
   font-family: var(--Poppins);
   font-size: 16px;
   font-weight: 400;
 }
 
 .linkStyle {
-  color: black;
+  color: var(--text-light-v2-clr);
   font-family: var(--Poppins);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
 }
 
 .listContainer {
   display: flex;
   flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .titleLink {
-  color: var(--gray-clr);
+  color: white;
   font-family: var(--Poppins);
   font-size: 16px;
   font-weight: 500;
-}
-
-.listContainer {
-  margin-top: 46px;
-  display: flex;
-  flex-direction: column;
-  gap: 46px;
 }
 
 .inputClass > input {
@@ -84,11 +86,13 @@
 
 .hrLineStyle {
   margin: 2rem 0px;
+  height: 3px;
+  background-color: #575757;
 }
 
 .paraLast {
   font-family: var(--Poppins);
-  color: #000;
+  color: var(--text-light-v2-clr);
   font-size: 16px;
   font-weight: 600;
 }
@@ -119,4 +123,24 @@
   .inputClass > input {
     width: 90%;
   }
+}
+
+.footerRootCont {
+  background-color: var(--footer-bg-clr);
+}
+
+.detailDiv {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.detailDiv > svg {
+  color: white;
+}
+
+.detailRootDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }

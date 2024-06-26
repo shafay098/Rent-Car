@@ -6,6 +6,10 @@ import Link from "next/link";
 import Input from "../Input";
 import classes from "./Footer.module.css";
 import { Button } from "../Button";
+import Image from "next/image";
+import { HiOutlineLocationMarker } from "react-icons/hi";
+import { BsTelephone } from "react-icons/bs";
+import { CiMail } from "react-icons/ci";
 
 export const Footer = () => {
   const [email, setEmail] = useState("");
@@ -30,74 +34,118 @@ export const Footer = () => {
   }
 
   return (
-    <Container className="mt-32">
-      <Row>
-        <Col xxl={3} xl={3} lg={12} xs={12}>
-          <div className={classes?.firstColDiv}>
-            <h3 className={classes?.headingText}>Furniro</h3>
-            <p className={classes?.paraText}>
-              400 University Drive Suite 200 Coral Gables, FL 33134 USA
-            </p>
-          </div>
-        </Col>
-
-        <Col xxl={3} xl={3} lg={4} md={4} sm={4} xs={6}>
-          {listItems(linksObject1)}
-        </Col>
-
-        <Col xxl={3} xl={3} lg={4} md={4} sm={4} xs={6}>
-          {listItems(linksObject2)}
-        </Col>
-
-        <Col xxl={3} xl={3} lg={4} md={4} sm={4} xs={12}>
-          {
-            <div className={classes?.newsletterDiv}>
-              <p className={classes?.paraText}>Newsletter</p>
-              <div className={classes?.subscribeCont}>
-                <Input
-                  inputContainerClass={classes?.inputClass}
-                  value={email}
-                  setValue={setEmail}
+    <Container fluid className={classes?.footerRootCont}>
+      <Container className="mt-32">
+        <Row>
+          <Col xxl={3} xl={3} lg={12} xs={12}>
+            <div className={classes?.firstColDiv}>
+              <h3 className={classes?.headingLogo}>
+                <Image
+                  src={"/images/Logo.png"}
+                  height={25}
+                  width={116}
+                  alt="logo"
                 />
+              </h3>
 
-                <p className={classes?.subscribeText} onClick={() => {}}>
-                  SUBSCRIBE
-                </p>
+              <div className={classes?.detailRootDiv}>
+                <div className={classes?.detailDiv}>
+                  <HiOutlineLocationMarker size={24} />
+                  <p className="p4-light">
+                    25566 Hc 1, Glenallen, Alaska, 99588, USA
+                  </p>
+                </div>
+
+                <div className={classes?.detailDiv}>
+                  <BsTelephone size={24} />
+                  <p className="p4-light">+603 4784 273 12</p>
+                </div>
+
+                <div className={classes?.detailDiv}>
+                  <CiMail size={24} />
+                  <p className="p4-light">rentcars@gmail.com</p>
+                </div>
               </div>
             </div>
-          }
-        </Col>
-      </Row>
-      <Row>
-        <hr className={classes?.hrLineStyle} />
+          </Col>
 
-        <Col xs={12}>
-          <div className={classes?.lastFooterSecCont}>
-            <h6 className={classes?.paraLast}>
-              2023 furino. All rights reverved
-            </h6>
-          </div>
-        </Col>
-      </Row>
+          <Col xxl={2} xl={2} lg={4} md={4} sm={4} xs={6}>
+            {listItems(linksObject1)}
+          </Col>
+
+          <Col xxl={2} xl={2} lg={4} md={4} sm={4} xs={6}>
+            {listItems(linksObject2)}
+          </Col>
+
+          <Col xxl={2} xl={2} lg={4} md={4} sm={4} xs={6}>
+            {listItems(linksObject2)}
+          </Col>
+
+          <Col xxl={3} xl={3} lg={4} md={4} sm={4} xs={12}>
+            {
+              <div className={classes?.newsletterDiv}>
+                <p className={classes?.paraText}>Newsletter</p>
+                <div className={classes?.subscribeCont}>
+                  <Input
+                    inputContainerClass={classes?.inputClass}
+                    value={email}
+                    setValue={setEmail}
+                  />
+
+                  <p className={classes?.subscribeText} onClick={() => {}}>
+                    SUBSCRIBE
+                  </p>
+                </div>
+              </div>
+            }
+          </Col>
+        </Row>
+        <Row>
+          <hr className={classes?.hrLineStyle} />
+
+          <Col xs={12}>
+            <div className={classes?.lastFooterSecCont}>
+              <h6 className={classes?.paraLast}>
+                Copyright 2023 ・ Rentcars, All Rights Reserved
+              </h6>
+            </div>
+          </Col>
+        </Row>
+      </Container>
     </Container>
   );
 };
 
 let linksObject1 = {
-  headerLink: "Links",
+  headerLink: "Our Product",
   links: [
-    { title: "Home", href: "/" },
-    { title: "Shop", href: "/" },
-    { title: "About", href: "/" },
-    { title: "Contact", href: "/" },
+    { title: "Career", href: "/" },
+    { title: "Car", href: "/" },
+    { title: "Packages", href: "/" },
+    { title: "Features", href: "/" },
+    { title: "Priceline", href: "/" },
   ],
 };
 
 let linksObject2 = {
-  headerLink: "Help",
+  headerLink: "Resources",
   links: [
-    { title: "Payment Options", href: "/" },
-    { title: "Returns", href: "/" },
-    { title: "Privacy Policies", href: "/" },
+    { title: "Download", href: "/" },
+    { title: "Help Centre", href: "/" },
+    { title: "Guides", href: "/" },
+    { title: "Partner Network", href: "/" },
+    { title: "Cruises", href: "/" },
+    { title: "Developer", href: "/" },
+  ],
+};
+
+let linksObject3 = {
+  headerLink: "About Rentcars",
+  links: [
+    { title: "Why choose us", href: "/" },
+    { title: "Our Story", href: "/" },
+    { title: "Investor Relations", href: "/" },
+    { title: "Press Center", href: "/" },
+    { title: "Advertise", href: "/" },
   ],
 };
