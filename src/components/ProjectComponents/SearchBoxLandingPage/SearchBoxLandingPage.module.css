@@ -23,3 +23,16 @@
   border-left: 1px solid black;
   padding-left: 24px;
 }
+
+.inputClass {
+  border: none !important;
+  padding-left: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.smallBoxCont {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  height: min-content;
+}

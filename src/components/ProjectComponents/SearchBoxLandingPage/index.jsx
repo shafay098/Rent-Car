@@ -12,21 +12,30 @@ export const SearchBoxLandingPage = () => {
         <GrLocation size={32} className={classes?.icon} />
         <div className={classes?.smallBoxCont}>
           <p className="p3">Location</p>
-          <Input inputContainerClass={classes?.inputClass} />
+          <Input
+            placeholder="Search your location"
+            inputPropClass={classes?.inputClass}
+          />
         </div>
       </div>
       <div className={classes?.box2}>
         <MdDateRange size={32} className={classes?.icon} />
         <div className={classes?.smallBoxCont}>
-          <p className="p3">Location</p>
-          <Input inputContainerClass={classes?.inputClass} />
+          <p className="p3">Pickup date</p>
+          <Input
+            placeholder="Tue 15 Feb, 09:00"
+            inputPropClass={classes?.inputClass}
+          />
         </div>
       </div>
       <div className={classes?.box3}>
         <MdDateRange size={32} className={classes?.icon} />
         <div className={classes?.smallBoxCont}>
-          <p className="p3">Location</p>
-          <Input inputContainerClass={classes?.inputClass} />
+          <p className="p3">Return date</p>
+          <Input
+            placeholder="Thu 16 Feb, 11:00"
+            inputPropClass={classes?.inputClass}
+          />
         </div>
       </div>
 

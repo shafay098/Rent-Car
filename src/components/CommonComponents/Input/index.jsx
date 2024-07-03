@@ -10,6 +10,7 @@ const Input = ({
   label,
   inputContainerClass,
   labelClass,
+  inputPropClass,
   ...props
 }) => {
   const [inputValue, setInputValue] = useState(value || "");
@@ -47,7 +48,10 @@ const Input = ({
           value={inputValue}
           onChange={handleInputChange}
           {...props}
-          className={classes.input}
+          className={mergeClass(
+            classes.input,
+            inputPropClass && inputPropClass
+          )}
         />
         {type === "password" && (
           <span
