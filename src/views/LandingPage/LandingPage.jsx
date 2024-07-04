@@ -12,6 +12,8 @@ import { GiMoneyStack } from "react-icons/gi";
 import { FaUserCheck } from "react-icons/fa";
 import { Ri24HoursFill } from "react-icons/ri";
 import { IoChatbubblesSharp } from "react-icons/io5";
+import { PopularDealCard } from "@/components/ProjectComponents/PopularDealsCard";
+import { popular_cards_data } from "@/data/DummyData";
 
 export const LandingPage = () => {
   const [location, setlocation] = useState("");
@@ -62,10 +64,36 @@ export const LandingPage = () => {
   const Section2 = () => {
     return (
       <Row>
-        <Col xs={12}></Col>
-        <Col xs={12}></Col>
+        <Col className="mb-4" xs={12}>
+          <div className={classes?.sec2HeadingCont}>
+            <div className={classes?.boxBlueSec2}>
+              <p>POPULAR RENTAL DEALS</p>
+            </div>
+            <h3 className="h3">Most popular cars rental deals</h3>
+          </div>
+        </Col>
+        {popular_cards_data?.map((item, index) => {
+          return (
+            <Col xs={3} key={index}>
+              <PopularDealCard key={index} data={item} />
+            </Col>
+          );
+        })}
       </Row>
     );
+  };
+
+  const Section3 = () => {
+    <Row className={classes?.sec3RowCont}>
+      <Col className="mb-4" xs={12}>
+        <div className={classes?.sec2HeadingCont}>
+          <div className={classes?.boxBlueSec2}>
+            <p>TESTIMONIALS</p>
+          </div>
+          <h3 className="h3">What peole say about us?</h3>
+        </div>
+      </Col>
+    </Row>;
   };
 
   return (
@@ -155,6 +183,9 @@ export const LandingPage = () => {
 
       {/* section 1 */}
       {<Section1 />}
+
+      {/* section 2 */}
+      <Section2 />
     </Container>
   );
 };

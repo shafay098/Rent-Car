@@ -171,3 +171,29 @@
 
   gap: 16px;
 }
+
+.boxBlueSec2 {
+  width: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 8px;
+  background: rgba(21, 114, 211, 0.1);
+}
+
+.boxBlueSec2 > p {
+  color: #1572d3;
+  font-family: var(--Poppins);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.sec2HeadingCont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+  gap: 24px;
+}
