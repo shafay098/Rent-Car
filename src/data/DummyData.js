@@ -79,3 +79,65 @@ export const popular_cards_data = [
     price: "3,800",
   },
 ];
+
+export const swiper_card_data = [
+  {
+    image: "/images/swiper-img1.png",
+    starNumber: "5.0",
+    starNumberDefault: 4,
+    comment:
+      "I feel very secure when using caretall's services. Your customer care team is very enthusiastic and the driver is always on time.",
+    customerName: "Charlie Johnson",
+    destination: "From New York, US",
+  },
+
+  {
+    image: "/images/swiper-img2.png",
+    starNumber: "5.0",
+    starNumberDefault: 4,
+    comment:
+      "I feel very secure when using caretall's services. Your customer care team is very enthusiastic and the driver is always on time.",
+    customerName: "Charlie Johnson",
+    destination: "From New York, US",
+  },
+
+  {
+    image: "/images/swiper-img1.png",
+    starNumber: "5.0",
+    starNumberDefault: 4,
+    comment:
+      "I feel very secure when using caretall's services. Your customer care team is very enthusiastic and the driver is always on time.",
+    customerName: "Charlie Johnson",
+    destination: "From New York, US",
+  },
+
+  {
+    image: "/images/swiper-img2.png",
+    starNumber: "5.0",
+    starNumberDefault: 4,
+    comment:
+      "I feel very secure when using caretall's services. Your customer care team is very enthusiastic and the driver is always on time.",
+    customerName: "Charlie Johnson",
+    destination: "From New York, US",
+  },
+
+  {
+    image: "/images/swiper-img1.png",
+    starNumber: "5.0",
+    starNumberDefault: 4,
+    comment:
+      "I feel very secure when using caretall's services. Your customer care team is very enthusiastic and the driver is always on time.",
+    customerName: "Charlie Johnson",
+    destination: "From New York, US",
+  },
+
+  {
+    image: "/images/swiper-img2.png",
+    starNumber: "5.0",
+    starNumberDefault: 4,
+    comment:
+      "I feel very secure when using caretall's services. Your customer care team is very enthusiastic and the driver is always on time.",
+    customerName: "Charlie Johnson",
+    destination: "From New York, US",
+  },
+];

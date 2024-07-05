@@ -13,7 +13,12 @@ import { FaUserCheck } from "react-icons/fa";
 import { Ri24HoursFill } from "react-icons/ri";
 import { IoChatbubblesSharp } from "react-icons/io5";
 import { PopularDealCard } from "@/components/ProjectComponents/PopularDealsCard";
-import { popular_cards_data } from "@/data/DummyData";
+import { popular_cards_data, swiper_card_data } from "@/data/DummyData";
+import { Button } from "@/components/CommonComponents/Button";
+import { IoIosArrowRoundForward } from "react-icons/io";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { SwiperCard } from "@/components/ProjectComponents/SwiperCard";
+import { Pagination } from "swiper/modules";
 
 export const LandingPage = () => {
   const [location, setlocation] = useState("");
@@ -79,21 +84,84 @@ export const LandingPage = () => {
             </Col>
           );
         })}
+
+        <Col className="mt-5" xs={12}>
+          <div className={classes?.lastDivSec2}>
+            <Button
+              containerClass={"m-auto"}
+              variant="primary-light"
+              rightIcon={<IoIosArrowRoundForward size={30} />}
+            >
+              Show All Vehicles
+            </Button>
+          </div>
+        </Col>
       </Row>
     );
   };
 
   const Section3 = () => {
-    <Row className={classes?.sec3RowCont}>
-      <Col className="mb-4" xs={12}>
-        <div className={classes?.sec2HeadingCont}>
-          <div className={classes?.boxBlueSec2}>
-            <p>TESTIMONIALS</p>
+    return (
+      <Row className={classes?.sec3RowCont}>
+        <Col className="mb-4" xs={12}>
+          <div className={classes?.sec2HeadingCont}>
+            <div className={classes?.boxBlueSec2}>
+              <p>TESTIMONIALS</p>
+            </div>
+            <h3 className="h3">What peole say about us?</h3>
           </div>
-          <h3 className="h3">What peole say about us?</h3>
-        </div>
-      </Col>
-    </Row>;
+        </Col>
+        <Col xs={12}>
+          <Swiper
+            slidesPerView={2}
+            spaceBetween={50}
+            centeredSlides={false}
+            className={classes?.swiper}
+          >
+            {swiper_card_data?.map((item, index) => (
+              <SwiperSlide key={index}>
+                <SwiperCard data={item} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </Col>
+      </Row>
+    );
+  };
+
+  const Section4 = () => {
+    return (
+      <Row style={{ marginTop: "4rem" }} className={classes?.rowClass}>
+        <Col className={classes?.section4Col} xs={6}>
+          <div className={classes?.section4RootCont}>
+            <div className={classes?.boxBlueSec2}>
+              <p>DOWNLOAD</p>
+            </div>
+            <h2 className="h2">Download Rentcars App for FREE</h2>
+            <p className="p2">
+              For faster, easier booking and exclusive deals.
+            </p>
+            <div style={{ marginTop: "1rem" }} className={classes?.imagePayDiv}>
+              <Image
+                alt="image"
+                src={"/images/google play.png"}
+                width={150}
+                height={50}
+              />
+              <Image
+                alt="image"
+                src={"/images/apple play.png"}
+                width={150}
+                height={50}
+              />
+            </div>
+          </div>
+        </Col>
+        <Col className={classes?.colClass} xs={6}>
+          <div className={classes?.mobileDiv}></div>
+        </Col>
+      </Row>
+    );
   };
 
   return (
@@ -186,6 +254,10 @@ export const LandingPage = () => {
 
       {/* section 2 */}
       <Section2 />
+
+      <Section3 />
+
+      <Section4 />
     </Container>
   );
 };

@@ -138,6 +138,8 @@
 
 .footerRootCont {
   background-color: var(--footer-bg-clr);
+  position: relative;
+  z-index: 5;
 }
 
 .detailDiv {

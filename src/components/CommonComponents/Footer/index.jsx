@@ -36,7 +36,7 @@ export const Footer = () => {
 
   return (
     <Container fluid className={classes?.footerRootCont}>
-      <Container className="mt-32">
+      <Container>
         <Row>
           <Col className="mt-5" xxl={3} xl={3} lg={12} xs={12}>
             <div className={classes?.firstColDiv}>

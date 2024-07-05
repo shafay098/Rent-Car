@@ -6,6 +6,11 @@
   z-index: 3;
 }
 
+.swiper {
+  padding: 1rem 0;
+  height: 500px;
+}
+
 .textConainerSec1 {
   display: flex;
   flex-direction: column;
@@ -197,3 +202,37 @@
   margin-top: 4rem;
   gap: 24px;
 }
+
+.mobileDiv {
+  background-image: url("/images/iphone.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  width: 468px;
+  height: 800px;
+  overflow: hidden;
+  left: 200px;
+  z-index: 5;
+  position: relative;
+}
+
+.colClass {
+  position: relative !important;
+  z-index: 5 !important;
+  height: 400px;
+}
+
+/* .section4Col {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  background-image: url("/images/bgCar.png");
+  background-repeat: no-repeat;
+  background-size: 99% 96%;
+  background-position: -2375% 0%;
+} */
+
+/* .rowClass {
+  position: relative !important;
+  z-index: 5 !important;
+} */
