@@ -81,11 +81,20 @@
   width: 100%;
   height: 657px;
   background-color: var(--dark-bg-color);
-  top: 0;
-  left: 0;
+  top: -85px;
+  left: 179px;
   right: 10;
   background-position: 98% 100%;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url("/images/backframe landing.png");
+}
+
+@media screen and (max-width: 1200px) {
+  .headerContainer::after {
+    top: 0;
+    left: 0;
+    right: 10;
+    background-position: 100% 100%;
+  }
 }

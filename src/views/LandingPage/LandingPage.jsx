@@ -167,9 +167,12 @@ export const LandingPage = () => {
   return (
     <Container>
       <Row className="mt-5 mb-4">
-        <Col xs={6}>
+        <Col xxl={6} xl={6} lg={12} xs={12}>
           <div className={classes?.textConainerSec1}>
-            <h2 className="h2">Find, book and rent a car Easily</h2>
+            <h2 className="h2">
+              Find, book and <br /> rent a car{" "}
+              <span className={classes?.blueUnderLine}>Easily</span>
+            </h2>
             <p className="p2">
               Get a car wherever and whenever you need it with your IOS and
               Android device.
@@ -190,9 +193,9 @@ export const LandingPage = () => {
             </div>
           </div>
         </Col>
-        <Col xs={6}>
+        <Col xxl={6} xl={6} lg={12} xs={12}>
           <div className={classes?.imageContainer}>
-            <Image src={"/images/car landingpage.png"} alt="image" fill />
+            <Image src={"/images/car-blue.png"} alt="image" fill />
           </div>
         </Col>
         <Col xs={12}>
