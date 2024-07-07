@@ -39,8 +39,8 @@ export const Header = () => {
   };
 
   return (
-    <Container className={mergeClass("mt-4", classes?.headerContainer)}>
-      <Row>
+    <Container className={mergeClass("mt-4")}>
+      <Row className={classes?.headerContainer}>
         <Col xs={3}>
           <div className={classes?.logoContainerStyle}>
             <Image src={"/images/Logo.png"} fill alt="logo" />
@@ -64,7 +64,7 @@ export const Header = () => {
               open={isOpen}
               onClose={toggleDrawer}
               direction="right"
-              className="bla bla bla"
+              className={classes?.drawerClass}
             >
               <div className={classes?.rootContainer}>
                 <div className={classes?.drawerImageCont}>

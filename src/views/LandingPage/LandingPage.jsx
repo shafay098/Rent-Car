@@ -19,16 +19,19 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { SwiperCard } from "@/components/ProjectComponents/SwiperCard";
 import { Pagination } from "swiper/modules";
+import useResponsiveHook from "@/hooks/useResponsiveHook";
 
 export const LandingPage = () => {
   const [location, setlocation] = useState("");
   const [date, setdate] = useState("");
   const [returnDate, setreturnDate] = useState("");
 
+  const mobileHook = useResponsiveHook(768);
+
   const Section1 = () => {
     return (
       <Row className="mt-5">
-        <Col xs={6}>
+        <Col xxl={6} xl={6} lg={12} xs={12}>
           <div className={classes?.bgCarDiv}>
             <Image
               alt="car"
@@ -39,7 +42,7 @@ export const LandingPage = () => {
           </div>
         </Col>
 
-        <Col xs={6}>
+        <Col xxl={6} xl={6} lg={12} xs={12}>
           <div className={classes?.sec2RootCont}>
             <div className={classes?.textBoxCont}>
               <div className={classes?.boxCont}>
@@ -77,13 +80,40 @@ export const LandingPage = () => {
             <h3 className="h3">Most popular cars rental deals</h3>
           </div>
         </Col>
-        {popular_cards_data?.map((item, index) => {
-          return (
-            <Col xs={3} key={index}>
-              <PopularDealCard key={index} data={item} />
-            </Col>
-          );
-        })}
+
+        <Swiper
+          breakpoints={{
+            1440: {
+              slidesPerView: 4,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+            650: {
+              slidesPerView: 1,
+            },
+          }}
+          slidesPerView={1}
+          spaceBetween={50}
+          loop={true}
+          centeredSlides={false}
+          className={classes?.popularCardSwiper}
+          pagination={{
+            dynamicBullets: true,
+          }}
+          modules={[Pagination]}
+        >
+          {popular_cards_data?.map((item, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <PopularDealCard key={index} data={item} />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
 
         <Col className="mt-5" xs={12}>
           <div className={classes?.lastDivSec2}>
@@ -113,10 +143,30 @@ export const LandingPage = () => {
         </Col>
         <Col xs={12}>
           <Swiper
+            breakpoints={{
+              1600: {
+                slidesPerView: 2,
+              },
+
+              1025: {
+                slidesPerView: 2,
+              },
+
+              1024: {
+                slidesPerView: 1,
+              },
+              310: {
+                slidesPerView: 1,
+              },
+            }}
             slidesPerView={2}
             spaceBetween={50}
             centeredSlides={false}
             className={classes?.swiper}
+            pagination={{
+              dynamicBullets: true,
+            }}
+            modules={[Pagination]}
           >
             {swiper_card_data?.map((item, index) => (
               <SwiperSlide key={index}>
@@ -132,7 +182,7 @@ export const LandingPage = () => {
   const Section4 = () => {
     return (
       <Row style={{ marginTop: "4rem" }} className={classes?.rowClass}>
-        <Col className={classes?.section4Col} xs={6}>
+        <Col className={classes?.section4Col} xxl={6} xl={6} lg={12} xs={12}>
           <div className={classes?.section4RootCont}>
             <div className={classes?.boxBlueSec2}>
               <p>DOWNLOAD</p>
@@ -157,7 +207,7 @@ export const LandingPage = () => {
             </div>
           </div>
         </Col>
-        <Col className={classes?.colClass} xs={6}>
+        <Col className={classes?.colClass} xxl={6} xl={6} lg={12} xs={12}>
           <div className={classes?.mobileDiv}></div>
         </Col>
       </Row>
@@ -194,8 +244,14 @@ export const LandingPage = () => {
           </div>
         </Col>
         <Col xxl={6} xl={6} lg={12} xs={12}>
-          <div className={classes?.imageContainer}>
-            <Image src={"/images/car-blue.png"} alt="image" fill />
+          <div className={classes?.carImageSetting}>
+            <div className={classes?.imageContainer}>
+              {mobileHook ? (
+                <Image src={"/images/Audi 2.png"} alt="image" fill />
+              ) : (
+                <Image src={"/images/car-blue.png"} alt="image" fill />
+              )}
+            </div>
           </div>
         </Col>
         <Col xs={12}>
@@ -214,7 +270,7 @@ export const LandingPage = () => {
             <p className="h3">Rent with following 3 working steps</p>
           </div>
         </Col>
-        <Col xs={4}>
+        <Col xxl={4} xl={4} lg={4} md={12} xs={12}>
           {WorkingStepCard(
             MdEditLocationAlt,
             "Choose Location",
@@ -222,7 +278,7 @@ export const LandingPage = () => {
           )}
         </Col>
 
-        <Col xs={4}>
+        <Col xxl={4} xl={4} lg={4} md={12} xs={12}>
           {WorkingStepCard(
             FaCalendarAlt,
             "Pick-up date",
@@ -230,7 +286,7 @@ export const LandingPage = () => {
           )}
         </Col>
 
-        <Col xs={4}>
+        <Col xxl={4} xl={4} lg={4} md={12} xs={12}>
           {WorkingStepCard(
             FaCarRear,
             "Book your car",

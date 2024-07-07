@@ -78,6 +78,20 @@ export const popular_cards_data = [
     },
     price: "3,800",
   },
+
+  {
+    image: "/images/lamborghini.png",
+    title: "Lamborghini Huracan",
+    starsAverage: 4.8,
+    totalReviews: "(2.436 reviews)",
+    necessities: {
+      passenger: "4 Passangers",
+      gearType: "Auto",
+      airCondition: "Air Conditioning",
+      doors: "4 Doors",
+    },
+    price: "3,800",
+  },
 ];
 
 export const swiper_card_data = [
